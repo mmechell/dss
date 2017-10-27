@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import math
 
 # Somma di due vettori
@@ -28,9 +31,13 @@ def distance(v1, v2):
 def vector_sum(vectors_list):
     return reduce(vector_add, vectors_list)
 
-# Prodotto di uno scalare per un vettore
+# Prodotto di uno scalare per un vettore - NON FUNZIONA con le matrici
 def scalar_multiply(scalar, vector):
     return [ scalar * element for element in vector ]
+
+# Prodotto di uno scalare per una matrice
+def scalar_matrix_multiply(scalar, vector):
+    return [ scalar_multiply(scalar, element) for element in vector ]
 
 # Media dei vettori contenuti in una lista di vettori
 def vector_mean(vectors_list):
